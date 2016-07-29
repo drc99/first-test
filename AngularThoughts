@@ -1,0 +1,62 @@
+Here are some basic assumptions:
+1. Conservation of energy; this includes linear and angular energy.  Not sure how to handle the expectation that energy is not conserved so begin with the assumption that it is.
+2.  Conservation of momentum; including linear and angular momentum.
+3.  Internal forces.  The dynamic actions are the ball rolling, the ball moving from the initial position at the top of the wheel to the final position at the edge of the wheel, and the wheel rotation.
+4.  External forces.  Appears to be three, when the ball falls off, when the pawl stops the rotation and when the ball gets back on. Ignore wheel bearing friction, assume ball has friction rolling on rail, and no air friction.  Also we assume the wheel is perfectly balanced.
+5. Moving parts are the wheel, the balls and the pawl brake.
+6. Note to self, use metric units to reduce math mistakes; meters, kilograms, seconds.
+
+Here are some relevant formulas:
+1.  Since the wheel and the balls are rotating we need to know their respective moments of inertia, I.  Each ball has two moments of inertia.  One moment is from the rotation of the ball as it is rolling.  The other moment is from the rotation of the wheel.  We will call this the point moment of inertia.
+Wheel
+I(wheel)= 1/4(MRR) where M is the mass of the wheel and RR is the squared radius of the wheel.
+Balls
+I(ball)=2/5(MRR) where M is the mass of the ball and RR is the squared radius of the ball.
+I(point)=MRR where M is the mass of the the ball and RR is the squared radius of the distance from the center of the wheel to the center of the ball.
+Brake
+The pawl brake does not rotate so it has no moment of inertia.
+Torque
+Torque is caused by gravity and acceleration.  The torque due to gravity is T=RMGSinTheta where R is the distance from the point of rotation, M is the mass, G is gravity, and SinTheta is the angle from the perpendicular. 
+
+2.  Initial energy of the system = Final energy of the system.  In this case we are hoping this is not true but we need to start somewhere.  There are several sources of energy, kinetic energy and potential energy and perhaps the force of the pawl brake.  The kinetic energy can be either linear 1/2(MVV) or angular 1/2(IWW)
+Wheel
+Normally the initial energy of the wheel would be equal to the final energy of the wheel so we would not include it in the conservation of energy equations.  The wheel energy is IW where I is the wheel moment of inertia and W is the rotational velocity.  Since initially the wheel is not turning IW(initial) is zero.
+Ball
+Starting with the ball at the top of the wheel, the initial energy is all potential energy which is MGH, where M is the mass of the ball, G is gravity, and H is the height above some reference point.  
+The final energy is where the ball falls off the wheel.  The ball does gain some kinetic energy as it rolls down the ramp however, the ball stops rolling at the end of the ramp.  So we assume all of this kinetic energy gets converted into rotational energy.  The final rotational energy is IW where I is the ball moment of inertia and W is the angular velocity of the ball where the ball falls off the wheel.  There is something weird here we need to discuss.  There are two rotational components for the ball, the ball rotating around its own axis and the ball rotating around the wheel axis. Since the ball is not rolling at this point, I think we should only use the IW of the point mass of the ball.
+Brake
+Since the pawl brake does not rotate is does not contribute any angular energy to the system.
+
+3.  Initial momentum of the system = final momentum of the system.  Momentum can be either linear MV or angular IW.
+Wheel
+Initial wheel momentum is zero.
+Final wheel momentum is IW where I is the wheel moment of inertia and W is the angular velocity.
+The wheel momentum changes as it rotates for several reasons:
+a.  The ball moving away from the axis of the wheel,
+b.  The ball falling off the wheel,
+c.  The pawl brake stopping the wheel from rotating,
+d.  The ball loading back on the wheel.
+Ball
+Starting with the ball at the top of the wheel, the initial momentum is IW where I is the point moment of inertia and W is the angular velocity of the wheel.  Since the ball is not rolling at the top there is no contribution from this rotation.
+Final momentum of the ball is a combination of the linear momentum of the ball MV plus the rotational momentum of the ball (if it is is still rotating) plus the point momentum of the ball rotating around the wheel axis IW.  Perhaps we can ignore the momentum of the ball rotating around its own axis.
+Brake
+The brake stops the wheel from rotating. If the wheel is not rotating when this happens then perhaps the brake does not change the rotational momentum of the wheel.
+
+4. Internal forces.  The initial position of the ball at the top of the wheel produces no torque because SinTheta is zero.  The ball generates an increasing torque as it rolls to the final position.  The final torque is T = RMGSinTheta.  This equation can be used to sum the torque contributions for each ball on the wheel.
+The rolling ball also creates a small downward force since it is accelerating.  Need to ponder this a little more.
+As the wheel accelerates and deccelerates it creates additional torques.  Need to ponder more as well.
+
+
+5. External forces.
+a.  When the ball falls off the wheel, the torque on the wheel changes. The negative torque is T=RMGSinTheta where R is the distance from the wheel axis to the ball falling off, M is the mass of the ball, G is gravity, and SinTheta is the angle from the perpendicular to the angle where the ball falls off the wheel.
+b.  When the ball loads back on the wheel, the torque is the same equation T=RMGSinTheta.  
+c.  When the pawl brake stops the wheel the torque is equal to the sum of all the torques on the wheel plus any rotational energy in the wheel..  In this case the sum of the torques of all the balls is T=RMGSinTheta for each ball on the wheel.
+
+6.  Some items to consider:
+a.  Can the rotation of the ball as it rolls be ignored?
+b.  Can the acceleration of the ball as it rolls down the ramp be ignored?
+c.  Can the acceleration of the wheel be ignored?
+
+
+
+
